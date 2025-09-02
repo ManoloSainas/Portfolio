@@ -1,5 +1,5 @@
-import { PropsWithChildren } from 'react'
-import { StyledButton } from './styled'
+import type { PropsWithChildren } from 'react'
+import { StyledButton, type buttonVariant } from './styled'
 
 type Props = PropsWithChildren<{
   onClick: () => void
@@ -8,9 +8,11 @@ type Props = PropsWithChildren<{
   fontSize?: string
   borderRadius?: string
   border?: string
+  padding?: string
   width?: string
   color?: string
   active?: boolean
+  variant?: buttonVariant
 }>
 
 export const Button = ({
@@ -21,9 +23,11 @@ export const Button = ({
   borderRadius,
   backgroundColor,
   border,
+  padding,
   width,
   color,
-  active = undefined
+  active = undefined,
+  variant = undefined
 }: Props) => {
   return (
     <StyledButton
@@ -33,9 +37,11 @@ export const Button = ({
       $fontSize={fontSize}
       $borderRadius={borderRadius}
       $border={border}
+      $padding={padding}
       $width={width}
       $color={color}
       active={active}
+      variant={variant}
     >
       {children}
     </StyledButton>
