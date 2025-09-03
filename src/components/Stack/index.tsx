@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react'
+import type { PropsWithChildren } from 'react'
 import { StyledStack } from './styled'
 
 type Props = PropsWithChildren<{

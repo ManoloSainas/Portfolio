@@ -10,7 +10,7 @@ export const Home = () => {
       height="100vh"
       flexDirection="column"
       padding="80px 0px 0px 0px"
-      backgroundColor="#e8fff9"
+      backgroundColor="#c2ffef"
     >
       <StyledH1>Ciao, sono Manolo!</StyledH1>
       <StyledH1>Front-end Developer ❤️</StyledH1>

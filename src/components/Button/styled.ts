@@ -36,8 +36,13 @@ export const StyledButton = styled.button<{
   width: ${({ $width }) => $width};
   color: ${({ $color }) => $color};
 
+  transition:
+    transform 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+
   &:hover {
     background-color: rgba(203, 255, 245, 1);
+    transform: scale(1.1);
   }
 
   @media (max-width: 376px) {
