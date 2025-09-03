@@ -4,7 +4,7 @@ export type buttonVariant = keyof typeof buttonVariants
 
 export const buttonVariants = {
   navbar: {
-    backgorundColor: '#edfff5',
+    backgorundColor: '#e8fff9',
     border: 'none',
     borderRadius: '20%',
     padding: '15px'

@@ -9,5 +9,6 @@ export const StyledText = styled.h1<{
   font-family: ${({ $fontFamily }) => $fontFamily};
   font-size: ${({ $fontSize }) => $fontSize};
   @media (max-width: 376px) {
+    font-size: 30px;
   }
 `

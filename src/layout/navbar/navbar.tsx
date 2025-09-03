@@ -1,5 +1,4 @@
-import { StyledNavbar } from './style'
-import { Text } from '../../components/Text'
+import { StyledNavbar, StyledNavText } from './style'
 import { Button } from '../../components/Button'
 import { Stack } from '../../components/Stack'
 import { useNavigate } from 'react-router-dom'
@@ -8,10 +7,8 @@ export const Navbar = () => {
   const navigate = useNavigate()
   return (
     <StyledNavbar>
-      <Text as="h1" fontFamily="Brush Script MT" fontSize="40px">
-        Manolo Sainas - Portfolio
-      </Text>
-      <Stack gap="20px">
+      <StyledNavText>Manolo Sainas - Portfolio</StyledNavText>
+      <Stack justifyContent="space-between" gap="0.5rem">
         <Button variant="navbar" onClick={() => navigate('/Home')}>
           Home
         </Button>
