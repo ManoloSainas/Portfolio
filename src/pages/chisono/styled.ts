@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 export const StyledChiSono = styled.div`
   display: flex;
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  width: 100%;
   justify-content: center;
   background-color: #c2ffef;
   gap: 3rem;

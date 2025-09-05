@@ -8,7 +8,7 @@ export const Navbar = () => {
   return (
     <StyledNavbar>
       <StyledNavText>Manolo Sainas - Portfolio</StyledNavText>
-      <Stack justifyContent="space-between" gap="0.5rem">
+      <Stack justifyContent="space-between" gap="0.5rem" flexWrap="wrap">
         <Button variant="navbar" onClick={() => navigate('/Home')}>
           Home
         </Button>

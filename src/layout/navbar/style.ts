@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const StyledNavbar = styled.nav`
   display: flex;
-  width: 100vw;
+  width: 100%;
   background: linear-gradient(to bottom, #31ff1eff, #c2ffef);
   justify-content: center;
   flex-direction: column;
@@ -15,9 +15,15 @@ export const StyledNavText = styled.h1`
   font-family: 'Great Vibes', cursive;
   font-size: 3rem;
 
-  @media (max-width: 393px) {
+  @media (max-width: 519px) {
     text-align: center;
     font-family: 'Great Vibes', cursive;
     font-size: 2.4rem;
+  }
+
+  @media (max-width: 433px) {
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.1rem;
   }
 `

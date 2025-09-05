@@ -7,6 +7,7 @@ export const StyledStack = styled.div<{
   $height?: string
   $width?: string
   $flexDirection?: string
+  $flexWrap?: string
   $gap?: string
   $backgroundColor?: string
   $padding?: string
@@ -23,6 +24,7 @@ export const StyledStack = styled.div<{
   height: ${({ $height }) => $height};
   width: ${({ $width }) => $width};
   flex-direction: ${({ $flexDirection }) => $flexDirection};
+  flex-wrap: ${({ $flexWrap }) => $flexWrap};
   gap: ${({ $gap }) => $gap};
   background-color: ${({ $backgroundColor }) => $backgroundColor};
   padding: ${({ $padding }) => $padding};

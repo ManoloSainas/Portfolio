@@ -6,8 +6,8 @@ export const Home = () => {
     <Stack
       justifyContent="start"
       alignItems="center"
-      width="100vw"
-      height="100vh"
+      width="100%"
+      minHeight="100vh"
       flexDirection="column"
       padding="80px 0px 0px 0px"
       backgroundColor="#c2ffef"
