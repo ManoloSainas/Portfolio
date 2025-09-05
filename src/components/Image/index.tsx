@@ -5,8 +5,17 @@ type Props = {
   alt?: string
   width?: number
   height?: number
+  className?: string
 }
 
-export const Image = ({ imageUrl, alt = '', width, height }: Props) => {
-  return <StyledImage src={imageUrl} alt={alt} $width={width} $height={height} />
+export const Image = ({ imageUrl, alt = '', width, height, className }: Props) => {
+  return (
+    <StyledImage
+      src={imageUrl}
+      alt={alt}
+      $width={width}
+      $height={height}
+      className={className}
+    />
+  )
 }
