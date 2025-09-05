@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
-export type buttonVariant = keyof typeof buttonVariants
+export type ButtonVariant = keyof typeof buttonVariants
 
 export const buttonVariants = {
   navbar: {
-    backgorundColor: '#e8fff9',
+    backgroundColor: '#e8fff9',
     border: 'none',
     borderRadius: '20%',
     padding: '15px'
@@ -20,31 +20,33 @@ export const StyledButton = styled.button<{
   $width?: string
   $color?: string
   active?: boolean
-  variant?: buttonVariant
+  variant?: ButtonVariant
 }>`
-  background-color: ${({ $backgroundColor, variant }) =>
-    variant === undefined ? $backgroundColor : buttonVariants[variant].backgorundColor};
-  font-size: ${({ $fontSize }) => $fontSize};
+  background-color: ${({ active, $backgroundColor, variant }) =>
+    active
+      ? '#29ff3bff'
+      : variant
+        ? buttonVariants[variant].backgroundColor
+        : $backgroundColor};
+
   border-radius: ${({ $borderRadius, variant }) =>
-    variant === undefined ? $borderRadius : buttonVariants[variant].borderRadius};
+    variant ? buttonVariants[variant].borderRadius : $borderRadius};
+
   border: ${({ $border, variant }) =>
-    variant === undefined ? $border : buttonVariants[variant].border};
-
+    variant ? buttonVariants[variant].border : $border};
   padding: ${({ $padding, variant }) =>
-    variant === undefined ? $padding : buttonVariants[variant].padding};
-
+    variant ? buttonVariants[variant].padding : $padding};
   width: ${({ $width }) => $width};
   color: ${({ $color }) => $color};
+  font-size: ${({ $fontSize }) => $fontSize};
 
   transition:
     transform 0.3s ease-in-out,
     background-color 0.3s ease-in-out;
 
   &:hover {
-    background-color: rgba(203, 255, 245, 1);
+    background-color: ${({ active }) =>
+      active ? '#29ff3bff' : 'rgba(203, 255, 245, 1)'};
     transform: scale(1.1);
-  }
-
-  @media (max-width: 376px) {
   }
 `
