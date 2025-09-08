@@ -39,9 +39,10 @@ export const ChiSono = () => {
         <Stack
           gap="2rem"
           alignItems="center"
-          borderRadius="10%"
+          borderRadius="5%"
           backgroundColor="white"
           padding="1rem"
+          boxShadow="0px 4px 12px #53ff4f"
         >
           {techImages.map((img) => (
             <Image

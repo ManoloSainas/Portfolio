@@ -9,8 +9,10 @@ type Props = PropsWithChildren<{
   width?: string
   flexDirection?: string
   flexWrap?: string
+  flex?: string
   gap?: string
   backgroundColor?: string
+  background?: string
   padding?: string
   border?: string
   margin?: string
@@ -18,6 +20,7 @@ type Props = PropsWithChildren<{
   minWidth?: string
   maxWidth?: string
   minHeight?: string
+  boxShadow?: string
 }>
 
 export const Stack = ({
@@ -28,8 +31,10 @@ export const Stack = ({
   width,
   flexDirection = 'row',
   flexWrap,
+  flex,
   gap,
   backgroundColor,
+  background,
   padding,
   border,
   margin,
@@ -37,6 +42,7 @@ export const Stack = ({
   minWidth,
   maxWidth,
   minHeight,
+  boxShadow,
   children
 }: Props) => {
   return (
@@ -48,8 +54,10 @@ export const Stack = ({
       $width={width}
       $flexDirection={flexDirection}
       $flexWrap={flexWrap}
+      $flex={flex}
       $gap={gap}
       $backgroundColor={backgroundColor}
+      $background={background}
       $padding={padding}
       $border={border}
       $margin={margin}
@@ -57,6 +65,7 @@ export const Stack = ({
       $minWidth={minWidth}
       $maxWidth={maxWidth}
       $minHeight={minHeight}
+      $boxShadow={boxShadow}
     >
       {children}
     </StyledStack>

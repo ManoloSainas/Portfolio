@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const StyledStack = styled.div<{
+type cssProps = {
   $display?: string
   $justifyContent?: string
   $alignItems?: string
@@ -8,8 +8,10 @@ export const StyledStack = styled.div<{
   $width?: string
   $flexDirection?: string
   $flexWrap?: string
+  $flex?: string
   $gap?: string
   $backgroundColor?: string
+  $background?: string
   $padding?: string
   $border?: string
   $margin?: string
@@ -17,7 +19,10 @@ export const StyledStack = styled.div<{
   $minWidth?: string
   $maxWidth?: string
   $minHeight?: string
-}>`
+  $boxShadow?: string
+}
+
+export const StyledStack = styled.div<cssProps>`
   display: ${({ $display }) => $display || 'flex'};
   justify-content: ${({ $justifyContent }) => $justifyContent};
   align-items: ${({ $alignItems }) => $alignItems};
@@ -25,8 +30,10 @@ export const StyledStack = styled.div<{
   width: ${({ $width }) => $width};
   flex-direction: ${({ $flexDirection }) => $flexDirection};
   flex-wrap: ${({ $flexWrap }) => $flexWrap};
+  flex: ${({ $flex }) => $flex};
   gap: ${({ $gap }) => $gap};
   background-color: ${({ $backgroundColor }) => $backgroundColor};
+  background: ${({ $background }) => $background};
   padding: ${({ $padding }) => $padding};
   border: ${({ $border }) => $border};
   margin: ${({ $margin }) => $margin};
@@ -34,4 +41,5 @@ export const StyledStack = styled.div<{
   min-width: ${({ $minWidth }) => $minWidth};
   max-width: ${({ $maxWidth }) => $maxWidth};
   min-height: ${({ $minHeight }) => $minHeight};
+  box-shadow: ${({ $boxShadow }) => $boxShadow};
 `

@@ -8,7 +8,7 @@ export const StyledNavbar = styled.nav`
   flex-direction: column;
   align-items: center;
   gap: 5px;
-  padding: 0px 0px 40px 0px;
+  padding: 0px 0px 20px 0px;
 `
 export const StyledNavText = styled.h1`
   text-align: center;

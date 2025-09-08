@@ -2,16 +2,17 @@ import styled from 'styled-components'
 
 export const StyledChiSono = styled.div`
   display: flex;
-  min-height: 100vh;
+  min-height: 0vh;
+  flex: 1;
   width: 100%;
   justify-content: center;
+  align-items: center;
   background-color: #c2ffef;
   gap: 3rem;
-  padding-top: 5rem;
 
   .foto-manolo {
     border-radius: 50%;
-    border: 3px solid #3bff2d;
+    border: 3px solid #7eff72ff;
     box-shadow: 0px 4px 12px #53ff4f;
   }
 
